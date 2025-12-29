@@ -41,3 +41,7 @@ curl "http://127.0.0.1:8000/quiet-routes?origin=Prospect+Park&destination=Times+
 The API returns suggestions, warnings if live data is unavailable, and the feed
 timestamp. If `MTA_API_KEY` is missing the response includes an empty list with
 a warning.
+
+Each suggestion includes a `trip_planner_url` that opens the MTA trip planner
+with your origin and destination so you can get turn-by-turn instructions until
+native routing is implemented.

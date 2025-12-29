@@ -6,6 +6,9 @@ class RouteSuggestion(BaseModel):
     vehicle_count: int = Field(..., ge=0, description="Active vehicles observed in feed")
     quiet_score: float = Field(..., ge=0, le=1, description="Higher is quieter")
     rationale: str = Field(..., description="Explanation for the score")
+    trip_planner_url: str | None = Field(
+        None, description="External trip planner link for directions"
+    )
 
 
 class QuietRouteResponse(BaseModel):
